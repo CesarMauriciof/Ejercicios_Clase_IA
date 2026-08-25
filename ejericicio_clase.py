@@ -38,20 +38,20 @@ def gradien_descent(x_start, alpha, num_iterations):
 #4 inicializar los parametros del gradiente
 
 
-x_start = 6  # inicializar x en un lugar aleatorio de la función
-alpha = 0.01
-num_iterations = 15
+x_start = 2  # inicializar x en un lugar aleatorio de la función
+alpha = 0.005
+num_iterations =3
 
 
 trayectory = gradien_descent(x_start, alpha, num_iterations)
 
 #5 grafica la función objetivo y sus soluciones
 
-x = np.linspace(-6, 6, 400)
+x = np.linspace(-1, 3, 400)
 y = f (x)
 
-plt.figure(figsize=(8,6))
-plt.plot(x,y, label='$f(x)=x^2', color = 'blue')
+plt.figure(figsize=(10, 10))
+plt.plot(x,y, label='$f(x)=x^4 - 3*x^3 + 2', color = 'blue')
 plt.scatter(trayectory, f(trayectory), color= 'red', zorder=5)
 plt.plot(trayectory, f(trayectory), color = 'red', linestyle = "--", label='trayectoria del gradiente')
 plt.xlabel('$x$')
